@@ -244,7 +244,7 @@
       position: absolute;
       bottom: 2px; left: 2px;
       width: 22px; height: 22px;
-      background: var(--orange);
+      background: var(--text);
       border-radius: 50%;
       border: 2px solid var(--bg);
       display: grid; place-items: center;
@@ -253,7 +253,6 @@
 
     .hero-info { flex: 1; position: relative; z-index: 1; }
     .hero-name {
-      font-family: 'Syne', sans-serif;
       font-weight: 800;
       font-size: clamp(1.3rem, 3.5vw, 2rem);
       letter-spacing: -0.03em;
