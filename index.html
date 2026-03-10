@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>פרויקטים | Full Stack & Automation Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-badge">FS</div>
+    dev.portfolio
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">ראשי</a></li>
+    <li><a href="#" class="active">פרויקטים</a></li>
+    <li><a href="#">אוטומציה</a></li>
+    <li><a href="#">אודות</a></li>
+  </ul>
+  <a href="/cdn-cgi/l/email-protection#057c6a7077456068646c692b666a68" class="nav-cta">📬 צור קשר</a>
+  <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="החלף ערכת צבעים">🌙</button>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#" onclick="toggleMenu()">ראשי</a>
+  <a href="#" onclick="toggleMenu()">פרויקטים</a>
+  <a href="#" onclick="toggleMenu()">אוטומציה</a>
+  <a href="#" onclick="toggleMenu()">אודות</a>
+  <a href="/cdn-cgi/l/email-protection#add4c2d8dfedc8c0ccc4c183cec2c0" style="color: var(--accent);" onclick="toggleMenu()">📬 צור קשר</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-profile">
+    <div class="avatar">
+      <div class="avatar-ring">
+        <div class="avatar-inner">YN</div>
+      </div>
+      <div class="avatar-badge">⚡</div>
+    </div>
+
+    <div class="hero-info">
+      <div class="hero-name">מפתח Full Stack & אוטומציה</div>
+      <div class="hero-title">full_stack.developer() + <span>automation.engineer()</span></div>
+      <div class="hero-tags">
+        <span class="tag tag-blue">React / Next.js</span>
+        <span class="tag tag-cyan">Node.js</span>
+        <span class="tag tag-purple">Python</span>
+        <span class="tag tag-green">n8n / Make</span>
+        <span class="tag tag-orange">AI Integration</span>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">24+</div><div class="stat-label">פרויקטים</div></div>
+        <div class="stat"><div class="stat-num">5+</div><div class="stat-label">שנות ניסיון</div></div>
+        <div class="stat"><div class="stat-num">15+</div><div class="stat-label">לקוחות מרוצים</div></div>
+        <div class="stat"><div class="stat-num">∞</div><div class="stat-label">אוטומציות</div></div>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">▶ צפה בפרויקטים</a>
+      <a href="/cdn-cgi/l/email-protection#b6cfd9c3c4f6d3dbd7dfda98d5d9db" class="btn-ghost">📩 שלח הודעה</a>
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="tabs-bar">
+  <div class="tabs-wrapper">
+    <div class="tabs-fade-left" id="tabsFadeLeft"><div class="fade-arrow">◀</div></div>
+    <div class="tabs" id="tabsScroll">
+      <button class="tab-btn active" onclick="filterProjects('all', this)">📂 כל הפרויקטים <span class="tab-count">8</span></button>
+      <button class="tab-btn" onclick="filterProjects('web', this)">🌐 Full Stack <span class="tab-count">4</span></button>
+      <button class="tab-btn" onclick="filterProjects('automation', this)">⚙️ אוטומציה <span class="tab-count">3</span></button>
+      <button class="tab-btn" onclick="filterProjects('ai', this)">🤖 AI / ML <span class="tab-count">2</span></button>
+      <button class="tab-btn" onclick="filterProjects('saas', this)">🚀 SaaS <span class="tab-count">2</span></button>
+    </div>
+    <div class="tabs-fade-right" id="tabsFadeRight"><div class="fade-arrow">▶</div></div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-header">
+    <div class="section-title">המשך עבודה</div>
+    <div class="filter-row">
+      <button class="filter-chip active" onclick="setFilter('all', this)">הכל</button>
+      <button class="filter-chip" onclick="setFilter('live', this)">🟢 Live</button>
+      <button class="filter-chip" onclick="setFilter('wip', this)">🔶 בפיתוח</button>
+    </div>
+  </div>
+
+  <div class="projects-grid" id="projectsGrid">
+
+    <!-- Card 1 - Featured -->
+    <a href="https://github.com" target="_blank" rel="noopener" class="project-card featured" data-cat="web saas" data-status="live">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #0f172a, #1e1b4b);">🛒</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-blue">SaaS</div>
+        <div class="card-status"><span class="status-dot"></span>Live</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">פלטפורמת מסחר אלקטרוני מלאה</div>
+        <div class="card-desc">פלטפורמה מלאה לניהול חנות אינטרנטית עם מנהל תוכן, מערכת תשלומים מאובטחת, ניתוח נתונים בזמן אמת ולוח בקרה למנהלים. כוללת מערכת אוטומציה לשיווק וניהול מלאי.</div>
+        <div class="card-tech">
+          <span class="tech-pill">Next.js 14</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">Stripe</span>
+          <span class="tech-pill">PostgreSQL</span>
+          <span class="tech-pill">Redis</span>
+          <span class="tech-pill">AWS</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-link-label">🔗 צפה בפרויקט</div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="automation" data-status="live">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">⚡</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-green">אוטומציה</div>
+        <div class="card-status"><span class="status-dot"></span>Live</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">מערכת אוטומציה לניהול לידים</div>
+        <div class="card-desc">אוטומציה מלאה מ-CRM לשיווק: קליטת לידים, מיון חכם עם AI, שליחת מיילים מותאמים אישית ועדכון צוות המכירות בזמן אמת.</div>
+        <div class="card-tech">
+          <span class="tech-pill">n8n</span>
+          <span class="tech-pill">Make.com</span>
+          <span class="tech-pill">HubSpot API</span>
+          <span class="tech-pill">OpenAI</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-link-label">🔗 צפה בפרויקט</div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="ai" data-status="live">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);">🤖</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-purple">AI / ML</div>
+        <div class="card-status"><span class="status-dot"></span>Live</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">צ'אטבוט AI לשירות לקוחות</div>
+        <div class="card-desc">בוט שיחה חכם מבוסס GPT-4 עם זיכרון שיחה, אינטגרציה ל-CRM, ניתוח סנטימנט ועברה אוטומטית לנציג אנושי בעת הצורך.</div>
+        <div class="card-tech">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">LangChain</span>
+          <span class="tech-pill">GPT-4</span>
+          <span class="tech-pill">FastAPI</span>
+          <span class="tech-pill">Pinecone</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-link-label">🔗 צפה בפרויקט</div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 4 -->
+    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="web" data-status="live">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #0d1117, #161b22);">📊</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-cyan">Dashboard</div>
+        <div class="card-status"><span class="status-dot"></span>Live</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">לוח בקרה לניתוח נתוני עסק</div>
+        <div class="card-desc">דשבורד אינטראקטיבי בזמן אמת לניהול KPI, מכירות ומלאי עם גרפים דינמיים, התראות חכמות וייצוא PDF אוטומטי.</div>
+        <div class="card-tech">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">D3.js</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">MongoDB</span>
+          <span class="tech-pill">WebSocket</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-link-label">🔗 צפה בפרויקט</div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 5 -->
+    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="automation ai" data-status="wip">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #1c0a2e, #2d1b69);">🧠</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-orange">AI + אוטומציה</div>
+        <div class="card-status wip"><span class="status-dot"></span>בפיתוח</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">סוכן AI לניהול פרויקטים</div>
+        <div class="card-desc">סוכן AI אוטונומי שמנהל משימות, מתזמן פגישות, מסכם מיילים ומייצר דוחות שבועיים בצורה אוטומטית לחלוטין.</div>
+        <div class="card-tech">
+          <span class="tech-pill">AutoGen</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Notion API</span>
+          <span class="tech-pill">Google Calendar</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-link-label">🔗 GitHub</div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 6 -->
+    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="web saas" data-status="live">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #0a2027, #0d4a4a);">🏥</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-green">SaaS</div>
+        <div class="card-status"><span class="status-dot"></span>Live</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">מערכת ניהול קליניקה</div>
+        <div class="card-desc">פתרון מלא לניהול קליניקות רפואיות: תורים, תיקי מטופלים, חשבוניות, תזכורות SMS אוטומטיות ויומן צוות.</div>
+        <div class="card-tech">
+          <span class="tech-pill">Vue.js</span>
+          <span class="tech-pill">Laravel</span>
+          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">Twilio</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-link-label">🔗 צפה בפרויקט</div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 7 -->
+    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="automation" data-status="live">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #1a2f1a, #0d3321);">📧</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-green">אוטומציה</div>
+        <div class="card-status"><span class="status-dot"></span>Live</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">מנוע אוטומציה לאימייל מרקטינג</div>
+        <div class="card-desc">מערכת שיווק מייל חכמה עם סגמנטציה מבוססת AI, A/B testing אוטומטי, ואנליטיקס מתקדם לאופטימיזציה רציפה.</div>
+        <div class="card-tech">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">SendGrid</span>
+          <span class="tech-pill">Celery</span>
+          <span class="tech-pill">PostgreSQL</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-link-label">🔗 צפה בפרויקט</div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Card 8 -->
+    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="web ai" data-status="wip">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #1e0a3c, #3b0764);">✨</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-purple">AI App</div>
+        <div class="card-status wip"><span class="status-dot"></span>בפיתוח</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">כלי יצירת תוכן עם AI</div>
+        <div class="card-desc">פלטפורמת SaaS ליצירת תוכן שיווקי מותאם אישית: כותרות, פוסטים לרשתות, מיילים וסקריפטים — בכמה קליקים.</div>
+        <div class="card-tech">
+          <span class="tech-pill">Next.js</span>
+          <span class="tech-pill">OpenAI API</span>
+          <span class="tech-pill">Tailwind</span>
+          <span class="tech-pill">Supabase</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-link-label">🔗 GitHub</div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">// built with ❤️ & coffee — 2025</div>
+  <ul class="footer-links">
+    <li><a href="https://github.com" target="_blank">GitHub</a></li>
+    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#eb92849e99ab8e868a8287c5888486">📧 מייל</a></li>
+  </ul>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // Mouse glow on cards
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  });
+
+  // Tab filter
+  function filterProjects(cat, btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.project-card').forEach(card => {
+      if (cat === 'all') { card.style.display = ''; return; }
+      const cats = card.dataset.cat || '';
+      card.style.display = cats.includes(cat) ? '' : 'none';
+    });
+  }
+
+  // Status filter
+  function setFilter(status, btn) {
+    document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.project-card').forEach(card => {
+      if (status === 'all') { card.style.display = ''; return; }
+      card.style.display = card.dataset.status === status ? '' : 'none';
+    });
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.appear').forEach(el => observer.observe(el));
+
+  // ── Theme toggle ──
+  const html = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  let isLight = false;
+  function toggleTheme() {
+    isLight = !isLight;
+    html.classList.toggle('light', isLight);
+    btn.textContent = isLight ? '🌑' : '🌙';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  }
+  // Restore saved theme
+  if (localStorage.getItem('theme') === 'light') { isLight = true; html.classList.add('light'); btn.textContent = '🌑'; }
+
+  // ── Tabs scroll hint ──
+  const tabsScroll = document.getElementById('tabsScroll');
+  const fadeRight  = document.getElementById('tabsFadeRight');
+  const fadeLeft   = document.getElementById('tabsFadeLeft');
+  function updateTabsFade() {
+    if (!tabsScroll) return;
+    const { scrollLeft, scrollWidth, clientWidth } = tabsScroll;
+    // RTL: scrollLeft can be negative in some browsers
+    const sl = Math.abs(scrollLeft);
+    fadeRight.style.opacity = (sl + clientWidth < scrollWidth - 4) ? '1' : '0';
+    fadeLeft.style.opacity  = sl > 4 ? '1' : '0';
+  }
+  if (tabsScroll) {
+    tabsScroll.addEventListener('scroll', updateTabsFade, { passive: true });
+    window.addEventListener('resize', updateTabsFade);
+    updateTabsFade();
+  }
+</script>
+</body>
+</html>
