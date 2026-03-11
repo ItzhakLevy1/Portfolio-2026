@@ -381,7 +381,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem; /* Tighter gap for a more cohesive look */
+  gap: 0.5rem;
+  margin-bottom: 1em;
 }
 
 .skill-badge {
@@ -511,18 +512,18 @@ html.light .hero-divider::after {
 .projects-header {
   text-align: center;
   margin-bottom: 2rem;
+  position: relative;
 }
 .projects-header-title {
-  font-family: "Heebo", sans-serif;
+  margin-top: 5em;
+  margin-bottom: 3em;
   font-weight: 700;
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
-  letter-spacing: -0.01em;
-  color: var(--text);
-  margin-bottom: 1rem;
+  color: var(--dim);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  height: 2px;
+  box-shadow: 0 0 10px var(--accent);
 }
 .proj-count {
   font-family: "IBM Plex Mono", monospace;
