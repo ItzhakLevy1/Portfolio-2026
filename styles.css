@@ -595,6 +595,13 @@ html.light .hero-divider::after {
   color: #fff;
   border-color: rgba(59, 130, 246, 0.4);
 }
+.cat-tabs > .cat-tab:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 .ct-count {
   font-family: "IBM Plex Mono", monospace;
   background: rgba(99, 179, 255, 0.15);
