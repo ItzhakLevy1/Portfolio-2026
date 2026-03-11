@@ -1046,6 +1046,12 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .hero-name {
+    font-weight: 700;
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    margin-bottom: 0.6rem;
+    margin-right: 1em;
+  }
   .projects-grid {
     grid-template-columns: 1fr;
   }
