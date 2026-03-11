@@ -3,388 +3,410 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Itzhak Levy | Full Stack & Automation Developer</title>
+  <title>Itzhak Levy | Full Stack & QA Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="logo">
-    <div class="logo-badge">FS</div>
-    dev.portfolio
+  <a href="#hero" class="logo">
+    <div class="logo-badge">FS / QA</div>
+    <span class="logo-name">Itzhak Levy</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#">ראשי</a></li>
-    <li><a href="#" class="active">פרויקטים</a></li>
-    <li><a href="#">אוטומציה</a></li>
-    <li><a href="#">אודות</a></li>
+    <li><a href="#hero" onclick="scrollTo_('#hero'); return false;">ראשי</a></li>
+    <li><a href="#projects" class="active" onclick="scrollTo_('#projects'); return false;">פרויקטים</a></li>
   </ul>
-  <a href="/cdn-cgi/l/email-protection#057c6a7077456068646c692b666a68" class="nav-cta">📬 צור קשר</a>
-  <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="החלף ערכת צבעים">🌙</button>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="החלף ערכת צבעים">🌙</button>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </nav>
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
-  <a href="#" onclick="toggleMenu()">ראשי</a>
-  <a href="#" onclick="toggleMenu()">פרויקטים</a>
-  <a href="#" onclick="toggleMenu()">אוטומציה</a>
-  <a href="#" onclick="toggleMenu()">אודות</a>
-  <a href="/cdn-cgi/l/email-protection#add4c2d8dfedc8c0ccc4c183cec2c0" style="color: var(--accent);" onclick="toggleMenu()">📬 צור קשר</a>
+  <a href="#hero" onclick="scrollTo_('#hero'); return false;">ראשי</a>
+  <a href="#projects" onclick="scrollTo_('#projects'); return false;">פרויקטים</a>
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section id="hero">
   <div class="hero-profile">
     <div class="avatar">
       <div class="avatar-ring">
         <div class="avatar-inner">IL</div>
       </div>
-      <div class="avatar-badge">⚡</div>
     </div>
-
     <div class="hero-info">
-      <div class="hero-name">Full Stack & QA Engineer</div>
-      <!-- <div class="hero-title">full_stack.developer() + <span>automation.engineer()</span></div> -->
-      <div class="hero-tags">
-        <span class="tag tag-blue">React / Next.js</span>
-        <span class="tag tag-blue">Node.js</span>
-        <span class="tag tag-blue">Java</span>
-        <span class="tag tag-blue">Python</span>
-        <span class="tag tag-blue">Selenium</span>
-        <span class="tag tag-blue">API Testing</span>
-        <span class="tag tag-blue">Playwright</span> 
-        <span class="tag tag-blue">SQL</span>  
-        <span class="tag tag-blue">MongoDB</span>  
-
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><div class="stat-num">24+</div><div class="stat-label">פרויקטים</div></div>
-        <div class="stat"><div class="stat-num">5+</div><div class="stat-label">שנות ניסיון</div></div>
-        <div class="stat"><div class="stat-num">15+</div><div class="stat-label">לקוחות מרוצים</div></div>
-        <div class="stat"><div class="stat-num">∞</div><div class="stat-label">אוטומציות</div></div>
-      </div>
+  <div class="hero-name">Full Stack &amp; QA Engineer</div>
+  <div class="hero-divider"></div>
+  
+  <div class="skills-container">
+    <div class="skill-group">
+      <span class="skill-badge dev">React / Next.js</span>
+      <span class="skill-badge dev">Node.js</span>
+      <span class="skill-badge dev">Java</span>
+      <span class="skill-badge dev">Python</span>
+      <span class="skill-badge dev">MongoDB</span>
+      <span class="skill-badge dev">SQL</span>
     </div>
-
-    <div class="hero-actions">
-      <a href="#projects" class="btn-primary">▶ צפה בפרויקטים</a>
-      <a href="/cdn-cgi/l/email-protection#b6cfd9c3c4f6d3dbd7dfda98d5d9db" class="btn-ghost">📩 שלח הודעה</a>
+    
+    <div class="skill-group">
+      <span class="skill-badge qa">Selenium</span>
+      <span class="skill-badge qa">Playwright</span>
+      <span class="skill-badge qa">API Testing</span>
+      <span class="skill-badge qa">Allure</span>
+      <span class="skill-badge qa">Maven</span>
+      <span class="skill-badge tool">Chrome Extensions</span>
     </div>
+  </div>
+</div>
   </div>
 </section>
 
-<!-- TABS -->
-<div class="tabs-bar">
-  <div class="tabs-wrapper">
-    <!-- <div class="tabs-fade-left" id="tabsFadeLeft"><div class="fade-arrow">◀</div></div> -->
-    <div class="tabs" id="tabsScroll">
-      <button class="tab-btn" onclick="filterProjects('web', this)">Full Stack<span class="tab-count"><!-- 4 --></span></button>
-      <button class="tab-btn" onclick="filterProjects('automation', this)">QA Automation <span class="tab-count"><!-- 3 --></span></button>
-    </div>
-    <!-- <div class="tabs-fade-right" id="tabsFadeRight"><div class="fade-arrow">▶</div></div> -->
-  </div>
-</div>
-
 <!-- PROJECTS -->
-<section class="section" id="projects">
-  <!-- <div class="section-header">
-    <div class="section-title">המשך עבודה</div>
-    <div class="filter-row">
-      <button class="filter-chip active" onclick="setFilter('all', this)">הכל</button>
-      <button class="filter-chip" onclick="setFilter('live', this)">🟢 Live</button>
-      <button class="filter-chip" onclick="setFilter('wip', this)">🔶 בפיתוח</button>
+<section id="projects">
+  <div class="projects-header">
+    <div class="projects-header-title">Projects <span class="proj-count">8</span></div>
+    <div class="cat-tabs">
+      <button class="cat-tab active" onclick="filterCat('all',this)">🗂 הכל <span class="ct-count">8</span></button>
+      <div class="cat-tabs-sub">
+        <button class="cat-tab" onclick="filterCat('fullstack',this)">🌐 Full Stack <span class="ct-count">5</span></button>
+        <button class="cat-tab" onclick="filterCat('qa',this)">🧪 QA <span class="ct-count">3</span></button>
+      </div>
     </div>
-  </div> -->
+  </div>
 
   <div class="projects-grid" id="projectsGrid">
 
-    <!-- Card 1 - Featured -->
-    <a href="https://github.com" target="_blank" rel="noopener" class="project-card featured" data-cat="web saas" data-status="live">
+    <!-- FS 1 -->
+    <div class="project-card" data-cat="fullstack">
       <div class="card-thumb">
-        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #0f172a, #1e1b4b);">🛒</div>
+        <div class="card-thumb-bg" style="background:linear-gradient(135deg,#0f172a,#1e1b4b);">🛒</div>
         <div class="card-thumb-overlay"></div>
-        <div class="card-type-badge tag tag-blue">SaaS</div>
-        <div class="card-status"><span class="status-dot"></span>Live</div>
+        <div class="card-type-badge tag tag-blue">Full Stack</div>
       </div>
       <div class="card-body">
-        <div class="card-title">פלטפורמת מסחר אלקטרוני מלאה</div>
-        <div class="card-desc">פלטפורמה מלאה לניהול חנות אינטרנטית עם מנהל תוכן, מערכת תשלומים מאובטחת, ניתוח נתונים בזמן אמת ולוח בקרה למנהלים. כוללת מערכת אוטומציה לשיווק וניהול מלאי.</div>
-        <div class="card-tech">
-          <span class="tech-pill">Next.js 14</span>
-          <span class="tech-pill">TypeScript</span>
-          <span class="tech-pill">Stripe</span>
-          <span class="tech-pill">PostgreSQL</span>
-          <span class="tech-pill">Redis</span>
-          <span class="tech-pill">AWS</span>
-        </div>
-        <div class="card-footer">
-          <div class="card-link-label">🔗 צפה בפרויקט</div>
-          <div class="card-arrow">↗</div>
+        <div class="card-title">פלטפורמת מסחר אלקטרוני</div>
+        <div class="card-desc">מערכת חנות אינטרנטית מלאה עם ניהול מוצרים, תשלומים מאובטחים, לוח בקרה ואנליטיקס בזמן אמת.</div>
+        <div class="card-tech"><span class="tech-pill">Next.js 14</span><span class="tech-pill">TypeScript</span><span class="tech-pill">Stripe</span><span class="tech-pill">PostgreSQL</span></div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener" class="card-action-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="card-action-btn demo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            סרטון דמו
+          </a>
         </div>
       </div>
-    </a>
+    </div>
 
-    <!-- Card 2 -->
-    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="automation" data-status="live">
+    <!-- FS 2 -->
+    <div class="project-card" data-cat="fullstack">
       <div class="card-thumb">
-        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">⚡</div>
+        <div class="card-thumb-bg" style="background:linear-gradient(135deg,#0a2027,#0d4a4a);">📊</div>
         <div class="card-thumb-overlay"></div>
-        <div class="card-type-badge tag tag-green">אוטומציה</div>
-        <div class="card-status"><span class="status-dot"></span>Live</div>
+        <div class="card-type-badge tag tag-blue">Full Stack</div>
       </div>
       <div class="card-body">
-        <div class="card-title">מערכת אוטומציה לניהול לידים</div>
-        <div class="card-desc">אוטומציה מלאה מ-CRM לשיווק: קליטת לידים, מיון חכם עם AI, שליחת מיילים מותאמים אישית ועדכון צוות המכירות בזמן אמת.</div>
-        <div class="card-tech">
-          <span class="tech-pill">n8n</span>
-          <span class="tech-pill">Make.com</span>
-          <span class="tech-pill">HubSpot API</span>
-          <span class="tech-pill">OpenAI</span>
-        </div>
-        <div class="card-footer">
-          <div class="card-link-label">🔗 צפה בפרויקט</div>
-          <div class="card-arrow">↗</div>
+        <div class="card-title">לוח בקרה לניתוח נתונים</div>
+        <div class="card-desc">דשבורד אינטראקטיבי בזמן אמת עם גרפים דינמיים, התראות חכמות וייצוא PDF אוטומטי.</div>
+        <div class="card-tech"><span class="tech-pill">React</span><span class="tech-pill">Node.js</span><span class="tech-pill">MongoDB</span><span class="tech-pill">D3.js</span></div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener" class="card-action-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="card-action-btn demo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            סרטון דמו
+          </a>
         </div>
       </div>
-    </a>
+    </div>
 
-    <!-- Card 3 -->
-    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="ai" data-status="live">
+    <!-- FS 3 -->
+    <div class="project-card" data-cat="fullstack">
       <div class="card-thumb">
-        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);">🤖</div>
+        <div class="card-thumb-bg" style="background:linear-gradient(135deg,#0d1117,#161b22);">🏥</div>
         <div class="card-thumb-overlay"></div>
-        <div class="card-type-badge tag tag-purple">AI / ML</div>
-        <div class="card-status"><span class="status-dot"></span>Live</div>
-      </div>
-      <div class="card-body">
-        <div class="card-title">צ'אטבוט AI לשירות לקוחות</div>
-        <div class="card-desc">בוט שיחה חכם מבוסס GPT-4 עם זיכרון שיחה, אינטגרציה ל-CRM, ניתוח סנטימנט ועברה אוטומטית לנציג אנושי בעת הצורך.</div>
-        <div class="card-tech">
-          <span class="tech-pill">Python</span>
-          <span class="tech-pill">LangChain</span>
-          <span class="tech-pill">GPT-4</span>
-          <span class="tech-pill">FastAPI</span>
-          <span class="tech-pill">Pinecone</span>
-        </div>
-        <div class="card-footer">
-          <div class="card-link-label">🔗 צפה בפרויקט</div>
-          <div class="card-arrow">↗</div>
-        </div>
-      </div>
-    </a>
-
-    <!-- Card 4 -->
-    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="web" data-status="live">
-      <div class="card-thumb">
-        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #0d1117, #161b22);">📊</div>
-        <div class="card-thumb-overlay"></div>
-        <div class="card-type-badge tag tag-cyan">Dashboard</div>
-        <div class="card-status"><span class="status-dot"></span>Live</div>
-      </div>
-      <div class="card-body">
-        <div class="card-title">לוח בקרה לניתוח נתוני עסק</div>
-        <div class="card-desc">דשבורד אינטראקטיבי בזמן אמת לניהול KPI, מכירות ומלאי עם גרפים דינמיים, התראות חכמות וייצוא PDF אוטומטי.</div>
-        <div class="card-tech">
-          <span class="tech-pill">React</span>
-          <span class="tech-pill">D3.js</span>
-          <span class="tech-pill">Node.js</span>
-          <span class="tech-pill">MongoDB</span>
-          <span class="tech-pill">WebSocket</span>
-        </div>
-        <div class="card-footer">
-          <div class="card-link-label">🔗 צפה בפרויקט</div>
-          <div class="card-arrow">↗</div>
-        </div>
-      </div>
-    </a>
-
-    <!-- Card 5 -->
-    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="automation ai" data-status="wip">
-      <div class="card-thumb">
-        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #1c0a2e, #2d1b69);">🧠</div>
-        <div class="card-thumb-overlay"></div>
-        <div class="card-type-badge tag tag-orange">AI + אוטומציה</div>
-        <div class="card-status wip"><span class="status-dot"></span>בפיתוח</div>
-      </div>
-      <div class="card-body">
-        <div class="card-title">סוכן AI לניהול פרויקטים</div>
-        <div class="card-desc">סוכן AI אוטונומי שמנהל משימות, מתזמן פגישות, מסכם מיילים ומייצר דוחות שבועיים בצורה אוטומטית לחלוטין.</div>
-        <div class="card-tech">
-          <span class="tech-pill">AutoGen</span>
-          <span class="tech-pill">Python</span>
-          <span class="tech-pill">Notion API</span>
-          <span class="tech-pill">Google Calendar</span>
-        </div>
-        <div class="card-footer">
-          <div class="card-link-label">🔗 GitHub</div>
-          <div class="card-arrow">↗</div>
-        </div>
-      </div>
-    </a>
-
-    <!-- Card 6 -->
-    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="web saas" data-status="live">
-      <div class="card-thumb">
-        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #0a2027, #0d4a4a);">🏥</div>
-        <div class="card-thumb-overlay"></div>
-        <div class="card-type-badge tag tag-green">SaaS</div>
-        <div class="card-status"><span class="status-dot"></span>Live</div>
+        <div class="card-type-badge tag tag-blue">Full Stack</div>
       </div>
       <div class="card-body">
         <div class="card-title">מערכת ניהול קליניקה</div>
-        <div class="card-desc">פתרון מלא לניהול קליניקות רפואיות: תורים, תיקי מטופלים, חשבוניות, תזכורות SMS אוטומטיות ויומן צוות.</div>
-        <div class="card-tech">
-          <span class="tech-pill">Vue.js</span>
-          <span class="tech-pill">Laravel</span>
-          <span class="tech-pill">MySQL</span>
-          <span class="tech-pill">Twilio</span>
-        </div>
-        <div class="card-footer">
-          <div class="card-link-label">🔗 צפה בפרויקט</div>
-          <div class="card-arrow">↗</div>
+        <div class="card-desc">פתרון מלא לקליניקות: תורים, תיקי מטופלים, חשבוניות ותזכורות SMS אוטומטיות.</div>
+        <div class="card-tech"><span class="tech-pill">Vue.js</span><span class="tech-pill">Java Spring</span><span class="tech-pill">MySQL</span><span class="tech-pill">Twilio</span></div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener" class="card-action-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="card-action-btn demo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            סרטון דמו
+          </a>
         </div>
       </div>
-    </a>
+    </div>
 
-    <!-- Card 7 -->
-    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="automation" data-status="live">
+    <!-- FS 4 -->
+    <div class="project-card" data-cat="fullstack">
       <div class="card-thumb">
-        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #1a2f1a, #0d3321);">📧</div>
+        <div class="card-thumb-bg" style="background:linear-gradient(135deg,#1e0a3c,#3b0764);">✨</div>
         <div class="card-thumb-overlay"></div>
-        <div class="card-type-badge tag tag-green">אוטומציה</div>
-        <div class="card-status"><span class="status-dot"></span>Live</div>
+        <div class="card-type-badge tag tag-blue">Full Stack</div>
       </div>
       <div class="card-body">
-        <div class="card-title">מנוע אוטומציה לאימייל מרקטינג</div>
-        <div class="card-desc">מערכת שיווק מייל חכמה עם סגמנטציה מבוססת AI, A/B testing אוטומטי, ואנליטיקס מתקדם לאופטימיזציה רציפה.</div>
-        <div class="card-tech">
-          <span class="tech-pill">Python</span>
-          <span class="tech-pill">SendGrid</span>
-          <span class="tech-pill">Celery</span>
-          <span class="tech-pill">PostgreSQL</span>
-        </div>
-        <div class="card-footer">
-          <div class="card-link-label">🔗 צפה בפרויקט</div>
-          <div class="card-arrow">↗</div>
+        <div class="card-title">פלטפורמת יצירת תוכן AI</div>
+        <div class="card-desc">כלי SaaS ליצירת תוכן שיווקי מותאם: כותרות, פוסטים, מיילים וסקריפטים בכמה קליקים.</div>
+        <div class="card-tech"><span class="tech-pill">Next.js</span><span class="tech-pill">OpenAI API</span><span class="tech-pill">Python</span><span class="tech-pill">Supabase</span></div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener" class="card-action-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="card-action-btn demo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            סרטון דמו
+          </a>
         </div>
       </div>
-    </a>
+    </div>
 
-    <!-- Card 8 -->
-    <a href="https://github.com" target="_blank" rel="noopener" class="project-card" data-cat="web ai" data-status="wip">
+    <!-- FS 5 -->
+    <div class="project-card" data-cat="fullstack">
       <div class="card-thumb">
-        <div class="card-thumb-bg" style="background: linear-gradient(135deg, #1e0a3c, #3b0764);">✨</div>
+        <div class="card-thumb-bg" style="background:linear-gradient(135deg,#0f2027,#2c5364);">💬</div>
         <div class="card-thumb-overlay"></div>
-        <div class="card-type-badge tag tag-purple">AI App</div>
-        <div class="card-status wip"><span class="status-dot"></span>בפיתוח</div>
+        <div class="card-type-badge tag tag-blue">Full Stack</div>
       </div>
       <div class="card-body">
-        <div class="card-title">כלי יצירת תוכן עם AI</div>
-        <div class="card-desc">פלטפורמת SaaS ליצירת תוכן שיווקי מותאם אישית: כותרות, פוסטים לרשתות, מיילים וסקריפטים — בכמה קליקים.</div>
-        <div class="card-tech">
-          <span class="tech-pill">Next.js</span>
-          <span class="tech-pill">OpenAI API</span>
-          <span class="tech-pill">Tailwind</span>
-          <span class="tech-pill">Supabase</span>
-        </div>
-        <div class="card-footer">
-          <div class="card-link-label">🔗 GitHub</div>
-          <div class="card-arrow">↗</div>
+        <div class="card-title">אפליקציית צ'אט בזמן אמת</div>
+        <div class="card-desc">תקשורת קבוצתית עם חדרים, שיתוף קבצים, הצפנה ועדכונים דרך WebSocket.</div>
+        <div class="card-tech"><span class="tech-pill">React</span><span class="tech-pill">Node.js</span><span class="tech-pill">Socket.io</span><span class="tech-pill">MongoDB</span></div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener" class="card-action-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="card-action-btn demo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            סרטון דמו
+          </a>
         </div>
       </div>
-    </a>
+    </div>
+
+    <!-- QA 1 -->
+    <div class="project-card" data-cat="qa">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background:linear-gradient(135deg,#1a2f1a,#0d3321);">🧪</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-green">QA</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Selenium E2E Test Suite</div>
+        <div class="card-desc">סוויטת בדיקות אוטומטיות עם POM, דוחות HTML אוטומטיים ואינטגרציה לCI/CD.</div>
+        <div class="card-tech"><span class="tech-pill">Java</span><span class="tech-pill">Selenium</span><span class="tech-pill">TestNG</span><span class="tech-pill">Maven</span></div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener" class="card-action-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="card-action-btn demo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            סרטון דמו
+          </a>
+          <a href="https://docs.google.com" target="_blank" rel="noopener" class="card-action-btn slides">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8,21 12,17 16,21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            מצגת
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- QA 2 -->
+    <div class="project-card" data-cat="qa">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background:linear-gradient(135deg,#1a1a2e,#0f3460);">🎭</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-green">QA</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Playwright Automation Framework</div>
+        <div class="card-desc">פריימוורק בדיקות עם קרוס-בראוזר, API tests, visual regression ודוחות Allure.</div>
+        <div class="card-tech"><span class="tech-pill">Playwright</span><span class="tech-pill">Python</span><span class="tech-pill">Allure</span><span class="tech-pill">GitHub Actions</span></div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener" class="card-action-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="card-action-btn demo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            סרטון דמו
+          </a>
+          <a href="https://docs.google.com" target="_blank" rel="noopener" class="card-action-btn slides">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8,21 12,17 16,21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            מצגת
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- QA 3 -->
+    <div class="project-card" data-cat="qa">
+      <div class="card-thumb">
+        <div class="card-thumb-bg" style="background:linear-gradient(135deg,#1c0a2e,#2d1b69);">🔌</div>
+        <div class="card-thumb-overlay"></div>
+        <div class="card-type-badge tag tag-green">QA</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">REST API Testing Framework</div>
+        <div class="card-desc">מסגרת בדיקות API עם Postman/Newman, ולידציית schema וכיסוי מלא של endpoints.</div>
+        <div class="card-tech"><span class="tech-pill">Python</span><span class="tech-pill">Postman</span><span class="tech-pill">Newman</span><span class="tech-pill">SQL</span></div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener" class="card-action-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="card-action-btn demo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            סרטון דמו
+          </a>
+          <a href="https://docs.google.com" target="_blank" rel="noopener" class="card-action-btn slides">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8,21 12,17 16,21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            מצגת
+          </a>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-copy">// built with ❤️ & coffee — 2025</div>
   <ul class="footer-links">
-    <li><a href="https://github.com" target="_blank">GitHub</a></li>
-    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#eb92849e99ab8e868a8287c5888486">📧 מייל</a></li>
+    <li><a href="tel:0544300508" title="טלפון">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.22 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.86-.86a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <span class="footer-link-label">054-4300508</span>
+    </a></li>
+    <li><a href="https://wa.me/9720544300508" target="_blank" rel="noopener" title="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      <span class="footer-link-label">WhatsApp</span>
+    </a></li>
+    <li><a href="https://github.com/itzhaklevy" target="_blank" rel="noopener" title="GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      <span class="footer-link-label">GitHub</span>
+    </a></li>
+    <li><a href="https://linkedin.com/in/itzhaklevy" target="_blank" rel="noopener" title="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      <span class="footer-link-label">LinkedIn</span>
+    </a></li>
+    <li><a href="/cdn-cgi/l/email-protection#9cf5e8e6f4fdf7b2f0f9eae5dcf9f1fdf5f0b2fff3f1" title="מייל">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+      <span class="footer-link-label">מייל</span>
+    </a></li>
   </ul>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Mobile menu
-  function toggleMenu() {
-    document.getElementById('mobileNav').classList.toggle('open');
+<script>
+  // ── Smooth scroll helper ──
+  // Defined first so onclick="scrollTo_(...)" calls in HTML can find it
+  var mobileNav = document.getElementById('mobileNav');
+  var hamburger  = document.getElementById('hamburger');
+
+  function scrollTo_(selector) {
+    var target = document.querySelector(selector);
+    if (!target) return;
+    var navH = (document.querySelector('nav') || {offsetHeight:64}).offsetHeight;
+    var y = target.getBoundingClientRect().top + window.pageYOffset - navH;
+    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+    if (mobileNav) mobileNav.classList.remove('open');
   }
 
-  // Mouse glow on cards
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const r = card.getBoundingClientRect();
+  // ── Logo → scroll to top ──
+  var logoEl = document.querySelector('.logo');
+  if (logoEl) {
+    logoEl.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (mobileNav) mobileNav.classList.remove('open');
+    });
+  }
+
+  // ── Hamburger menu ──
+  function toggleMenu() {
+    if (mobileNav) mobileNav.classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!mobileNav || !hamburger) return;
+    if (!mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+      mobileNav.classList.remove('open');
+    }
+  });
+
+  // ── Mouse glow on cards ──
+  document.querySelectorAll('.project-card').forEach(function(card) {
+    card.addEventListener('mousemove', function(e) {
+      var r = card.getBoundingClientRect();
       card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
       card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
     });
   });
 
-  // Tab filter
-  function filterProjects(cat, btn) {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  // ── Category filter ──
+  function filterCat(cat, btn) {
+    document.querySelectorAll('.cat-tab').forEach(function(b) { b.classList.remove('active'); });
     btn.classList.add('active');
-    document.querySelectorAll('.project-card').forEach(card => {
-      if (cat === 'all') { card.style.display = ''; return; }
-      const cats = card.dataset.cat || '';
-      card.style.display = cats.includes(cat) ? '' : 'none';
+    document.querySelectorAll('.project-card').forEach(function(card) {
+      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
     });
   }
-
-  // Status filter
-  function setFilter(status, btn) {
-    document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.project-card').forEach(card => {
-      if (status === 'all') { card.style.display = ''; return; }
-      card.style.display = card.dataset.status === status ? '' : 'none';
-    });
-  }
-
-  // Scroll reveal
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.appear').forEach(el => observer.observe(el));
 
   // ── Theme toggle ──
-  const html = document.documentElement;
-  const btn = document.getElementById('themeToggle');
-  let isLight = false;
+  var htmlEl  = document.documentElement;
+  var themeBtn = document.getElementById('themeToggle');
+  var isLight = false;
+  try { isLight = localStorage.getItem('theme') === 'light'; } catch(e) {}
+
+  function applyTheme() {
+    if (isLight) {
+      htmlEl.classList.add('light');
+      if (themeBtn) themeBtn.textContent = '🌑';
+    } else {
+      htmlEl.classList.remove('light');
+      if (themeBtn) themeBtn.textContent = '🌙';
+    }
+  }
   function toggleTheme() {
     isLight = !isLight;
-    html.classList.toggle('light', isLight);
-    btn.textContent = isLight ? '🌑' : '🌙';
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    applyTheme();
+    try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch(e) {}
   }
-  // Restore saved theme
-  if (localStorage.getItem('theme') === 'light') { isLight = true; html.classList.add('light'); btn.textContent = '🌑'; }
+  applyTheme();
 
-  // ── Tabs scroll hint ──
-  const tabsScroll = document.getElementById('tabsScroll');
-  const fadeRight  = document.getElementById('tabsFadeRight');
-  const fadeLeft   = document.getElementById('tabsFadeLeft');
-  function updateTabsFade() {
-    if (!tabsScroll) return;
-    const { scrollLeft, scrollWidth, clientWidth } = tabsScroll;
-    // RTL: scrollLeft can be negative in some browsers
-    const sl = Math.abs(scrollLeft);
-    fadeRight.style.opacity = (sl + clientWidth < scrollWidth - 4) ? '1' : '0';
-    fadeLeft.style.opacity  = sl > 4 ? '1' : '0';
-  }
-  if (tabsScroll) {
-    tabsScroll.addEventListener('scroll', updateTabsFade, { passive: true });
-    window.addEventListener('resize', updateTabsFade);
-    updateTabsFade();
-  }
+  // ── Active nav highlight on scroll ──
+  window.addEventListener('scroll', function() {
+    var fromTop = window.pageYOffset + 90;
+    document.querySelectorAll('.nav-links a').forEach(function(a) {
+      var id  = a.getAttribute('href').replace('#', '');
+      var sec = document.getElementById(id);
+      if (sec && sec.offsetTop <= fromTop && sec.offsetTop + sec.offsetHeight > fromTop) {
+        a.classList.add('active');
+      } else {
+        a.classList.remove('active');
+      }
+    });
+  }, { passive: true });
 </script>
 </body>
 </html>
