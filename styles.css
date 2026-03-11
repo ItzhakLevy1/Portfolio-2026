@@ -515,6 +515,7 @@ html.light .hero-divider::after {
   position: relative;
 }
 .projects-header-title {
+  font-size: xx-large;
   margin-top: 3em;
   margin-bottom: 2em;
   font-weight: 700;
