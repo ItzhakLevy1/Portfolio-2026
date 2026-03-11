@@ -596,7 +596,6 @@ html.light .hero-divider::after {
   border-color: rgba(59, 130, 246, 0.4);
 }
 .cat-tabs > .cat-tab:first-child {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -966,6 +965,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 1em;
   }
   .cat-tabs-sub {
     display: flex;
@@ -974,5 +974,6 @@ body {
   .cat-tabs-sub .cat-tab {
     flex: 1;
     justify-content: center;
+    padding: 1em;
   }
 }
