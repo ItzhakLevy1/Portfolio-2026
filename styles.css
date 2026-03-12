@@ -708,10 +708,16 @@ html.light .hero-divider::after {
   justify-content: center;
   font-size: 3.5rem;
 }
-  /* The lower color part of the card */
+.card-thumb-bg img {
+  width: 200px; 
+  height: auto;
+  padding: 10px;
+  object-fit: contain; /* Ensures that the entire image will fit inside without being cut off */
+}
 .card-thumb-overlay {
   position: absolute;
   inset: 0;
+  /* The lower color part of the card */
   /* background: linear-gradient(
     to bottom,
     transparent 40%,
@@ -723,13 +729,12 @@ html.light .hero-divider::after {
   top: 12px;
   right: 12px;
   padding: 0.25rem 0.65rem;
-  border-radius: 100px;
   font-size: 0.7rem;
   font-weight: 700;
   font-family: "IBM Plex Mono", monospace;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  border: 1px solid #06b6d4;
+  border: 1px solid rgba(16, 185, 129, 0.25);
 }
 .card-status {
   position: absolute;
