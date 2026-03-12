@@ -699,6 +699,8 @@ html.light .hero-divider::after {
   flex-shrink: 0;
 }
 .card-thumb-bg {
+  /* The upper color part of the card */
+  /* background:linear-gradient(135deg,#0f172a,#1e1b4b); */
   position: absolute;
   inset: 0;
   display: flex;
@@ -706,14 +708,15 @@ html.light .hero-divider::after {
   justify-content: center;
   font-size: 3.5rem;
 }
+  /* The lower color part of the card */
 .card-thumb-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     transparent 40%,
     rgba(13, 20, 36, 0.95) 100%
-  );
+  ); */
 }
 .card-type-badge {
   position: absolute;
@@ -774,7 +777,7 @@ html.light .hero-divider::after {
   flex-direction: column;
 }
 .card-title {
-  font-family: "Syne", sans-serif;
+  text-align: center;
   font-weight: 700;
   font-size: 1rem;
   margin-bottom: 0.45rem;
@@ -782,6 +785,7 @@ html.light .hero-divider::after {
   color: #fff;
 }
 .card-desc {
+  text-align: center;
   font-size: 0.83rem;
   line-height: 1.6;
   color: var(--dim);
