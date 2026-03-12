@@ -729,6 +729,7 @@ html.light .hero-divider::after {
   font-family: "IBM Plex Mono", monospace;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  border: 1px solid #06b6d4;
 }
 .card-status {
   position: absolute;
