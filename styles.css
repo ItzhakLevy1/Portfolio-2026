@@ -64,6 +64,11 @@ html.light .hero-profile {
   box-shadow: 0 4px 32px rgba(59, 130, 246, 0.08);
 }
 html.light .project-card {
+  background: linear-gradient(
+    135deg,
+    var(--card-bg-a) 0%,
+    var(--card-bg-b) 100%
+  );
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
 html.light .project-card:hover {
@@ -594,14 +599,14 @@ html.light .hero-divider::after {
     rgba(6, 182, 212, 0.1)
   );
   color: #fff;
-  border-color: var(--borderB)
+  border-color: var(--borderB);
 }
 .cat-tabs > .cat-tab:first-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .ct-count {
   font-family: "IBM Plex Mono", monospace;
   background: rgba(99, 179, 255, 0.15);
