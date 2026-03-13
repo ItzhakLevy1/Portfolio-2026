@@ -621,6 +621,7 @@ html.light .hero-divider::after {
 }
 
 .project-card {
+  height: 33em;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 18px;
@@ -735,7 +736,7 @@ html.light .hero-divider::after {
   font-family: "IBM Plex Mono", monospace;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(99, 179, 255, 0.15)
 }
 .card-status {
   position: absolute;
@@ -779,6 +780,7 @@ html.light .hero-divider::after {
 
 .card-body {
   padding: 1.2rem;
+  padding-top: unset;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -825,7 +827,9 @@ html.light .hero-divider::after {
   flex-wrap: wrap;
   padding-top: 0.75rem;
   border-top: 1px solid var(--border);
-  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .card-action-btn {
   display: flex;
