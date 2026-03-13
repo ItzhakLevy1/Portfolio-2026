@@ -609,7 +609,6 @@ html.light .hero-divider::after {
 }
 .ct-count {
   font-family: "IBM Plex Mono", monospace;
-  background: rgba(99, 179, 255, 0.15);
   padding: 0.1rem 0.45rem;
   border-radius: 100px;
 }
@@ -721,6 +720,13 @@ html.light .hero-divider::after {
   height: auto;
   padding: 10px;
   object-fit: contain;
+}
+#paradisian-hotel-img{
+   width: 120px; 
+  height: auto;
+  padding: 10px;
+  object-fit: contain;
+  border-radius: 30%;
 }
 .card-thumb-overlay {
   position: absolute;
