@@ -621,7 +621,7 @@ html.light .hero-divider::after {
 }
 
 .project-card {
-  height: 33em;
+  height: 35em;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 18px;
@@ -715,6 +715,12 @@ html.light .hero-divider::after {
   height: auto;
   padding: 10px;
   object-fit: contain; /* Ensures that the entire image will fit inside without being cut off */
+}
+#gemini-ai-img{
+   width: 150px; 
+  height: auto;
+  padding: 10px;
+  object-fit: contain;
 }
 .card-thumb-overlay {
   position: absolute;
@@ -814,7 +820,6 @@ html.light .hero-divider::after {
 }
 .tech-pill {
   padding: 0.2rem 0.55rem;
-  background: rgba(99, 179, 255, 0.07);
   border: 1px solid rgba(99, 179, 255, 0.15);
   font-size: 0.7rem;
   font-family: "IBM Plex Mono", monospace;
