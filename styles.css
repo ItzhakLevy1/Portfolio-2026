@@ -536,8 +536,8 @@ html.light .hero-divider::after {
 .cat-tab {
   padding: 0.55rem 1.5rem;
   border-radius: 100px;
-  border: 1px solid var(--border);
-  background: var(--surface);
+  border: 3px solid var(--border);
+  background: var(--bg);
   color: #fff;
   font-family: "Heebo", sans-serif;
   font-weight: 600;
@@ -554,11 +554,6 @@ html.light .hero-divider::after {
   color: var(--text);
 }
 .cat-tab.active {
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.15),
-    rgba(6, 182, 212, 0.1)
-  );
   color: #fff;
   border-color: var(--borderB);
 }
