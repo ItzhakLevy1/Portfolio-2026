@@ -86,3 +86,13 @@
       }
     });
   }, { passive: true });
+
+  // Open presentation in new tab
+document.querySelectorAll('.card-action-btn').forEach(link => {
+    link.addEventListener('click', function(e) {
+        if (this.href.includes('canva.com')) {
+            window.open(this.href, '_blank');
+            e.preventDefault();
+        }
+    });
+});
