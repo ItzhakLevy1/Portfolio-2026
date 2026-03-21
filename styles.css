@@ -297,6 +297,7 @@ nav {
   backdrop-filter: blur(20px);
   position: relative;
   overflow: hidden;
+  background: linear-gradient(0deg, #11182778 0%, var(--bg) 100%);
 }
 .hero-profile::before {
   content: "";
