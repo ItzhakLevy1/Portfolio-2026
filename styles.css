@@ -96,7 +96,7 @@ html.light .hamburger span {
   background: #475569;
 }
 html.light .projects-header-title {
-  color: #0f172a;
+  color: var(--borderB);
 }
 html.light .section-label {
   color: #64748b;
@@ -325,6 +325,7 @@ nav {
   border-radius: 50%;
 }
 .hero-info {
+  color: var(--borderB);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -558,7 +559,7 @@ html.light .hero-divider::after {
 }
 .cat-tab.active {
   color: #fff;
-  border: 1px solid var(--purple);
+  border: 1px solid var(--accent);
 }
 .cat-tabs > .cat-tab:first-child {
   display: flex;
